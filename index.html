@@ -1,0 +1,104 @@
+<html>
+<head>
+<title> Mot Msg App by Pranav </title>
+<style>
+	*font { font-size:50px;}
+	body { background-color:lightblue;}
+	h2 { border:solid;}
+</style>
+<script>
+	function getmsg()
+	{
+		event.preventDefault();
+		let msg = document.getElementById("msg");
+		let aut = document.getElementById("aut");
+		let url = "https://api.quotable.io/random";
+	fetch(url)
+	.then(res=> res.json())
+	.then(data =>{
+		msg.innerHTML = "msg =" + data.content;
+		aut.innerHTML = "author = " + data.author;
+		})
+		.catch(err => msg.innerHTML = "issue=" + err);
+	}
+</script>
+</head>
+<body>
+<center>
+<h1> Motivational Msg App </h1>
+<form onsubmit="getmsg()">
+	<input type="submit"value="Get Msg"/>
+</form>
+<h2 id="msg"/>
+<h2 id="aut"/>
+
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
